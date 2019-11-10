@@ -64,10 +64,22 @@ class Pelicula {
   originalTitle     = json["original_title"];
   genreIds          = json["genre_ids"].cast<int>();
   title             = json["title"];
-  voteAverage       = json["vote_Average"] / 1;
+  voteAverage       = json["vote_average"] / (1);
   overview          = json["overview"];
   releaseDate       = json["release_date"];
 
   }
 
-}
+  getPosterImg() {
+
+    if ( posterPath == null ) {
+      return "https://pflag.org/sites/default/files/files/convention/2019Convention/No%20Image%20Available.png";
+    } else{
+      return "https://image.tmdb.org/t/p/w500/$posterPath";
+  }
+
+
+
+
+
+  }}
