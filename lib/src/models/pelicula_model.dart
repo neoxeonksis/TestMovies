@@ -19,6 +19,7 @@ class Peliculas{
 }
 
 class Pelicula {
+  String uniqueId; 
   double popularity;
   int voteCount;
   bool video;
@@ -76,10 +77,16 @@ class Pelicula {
       return "https://pflag.org/sites/default/files/files/convention/2019Convention/No%20Image%20Available.png";
     } else{
       return "https://image.tmdb.org/t/p/w500/$posterPath";
+    }
   }
 
+  getBackgroundImg() {
 
+    if ( posterPath == null ) {
+      return "https://pflag.org/sites/default/files/files/convention/2019Convention/No%20Image%20Available.png";
+    } else{
+      return "https://image.tmdb.org/t/p/w500/$backdropPath";
+    }
+  }
 
-
-
-  }}
+}
